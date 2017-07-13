@@ -1,0 +1,20 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="development" verbose="1" parallel="tests" thread-count="10">
+
+    <test name="thread.1" preserve-order="true">
+        <classes>
+            <class name="${package}.project.tests.functional.OpenMainPageByUrlTest"/>
+        </classes>
+    </test>
+
+    <test name="thread.2" preserve-order="true">
+        <classes>
+            <class name="${package}.project.tests.functional.OpenMainPageTest"/>
+        </classes>
+    </test>
+
+</suite>
