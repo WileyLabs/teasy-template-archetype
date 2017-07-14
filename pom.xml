@@ -8,6 +8,47 @@
   <packaging>maven-archetype</packaging>
 
   <name>teasy-template-archetype</name>
+  <description>Maven archetype for Teasy framework template </description>
+  <url>https://github.com/WileyLabs/teasy-template-archetype</url>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>http://www.opensource.org/licenses/mit-license.php</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Nikolay Tyukavkin</name>
+      <email>tyukavkin@wiley.com</email>
+      <organization>Wiley</organization>
+      <organizationUrl>http://www.wiley.com</organizationUrl>
+    </developer>
+    <developer>
+      <name>Vladimir Efimov</name>
+      <email>vefimov@wiley.com</email>
+      <organization>Wiley</organization>
+      <organizationUrl>http://www.wiley.com</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/WileyLabs/teasy-template-archetype.git</connection>
+    <developerConnection>scm:git:ssh://github.com/WileyLabs/teasy-template-archetype.git</developerConnection>
+    <url>http://github.com/WileyLabs/teasy-template-archetype</url>
+  </scm>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 
   <build>
     <extensions>
@@ -18,15 +59,101 @@
       </extension>
     </extensions>
 
-    <pluginManagement>
       <plugins>
+
         <plugin>
           <artifactId>maven-archetype-plugin</artifactId>
           <version>2.4</version>
         </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.10.4</version>
+          <executions>
+            <execution>
+              <id>attach-javadocs</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+              <configuration>
+                <additionalparam>-Xdoclint:none</additionalparam>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>1.5</version>
+          <executions>
+            <execution>
+              <id>sign-artifacts</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>org.sonatype.plugins</groupId>
+          <artifactId>nexus-staging-maven-plugin</artifactId>
+          <version>1.6.7</version>
+          <extensions>true</extensions>
+          <configuration>
+            <serverId>ossrh</serverId>
+            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+          </configuration>
+        </plugin>
+
       </plugins>
-    </pluginManagement>
+      <resources>
+        <resource>
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.properties</include>
+          </includes>
+          <filtering>true</filtering>
+        </resource>
+        <resource>
+          <directory>src/main/resources</directory>
+          <excludes>
+            <exclude>**/*.properties</exclude>
+          </excludes>
+          <filtering>false</filtering>
+        </resource>
+      </resources>
+      <testResources>
+        <testResource>
+          <directory>src/test/resources</directory>
+        </testResource>
+      </testResources>
   </build>
 
-  <description>Teasy Template</description>
 </project>
