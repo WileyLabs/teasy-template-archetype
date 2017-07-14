@@ -3,9 +3,9 @@
 #set( $symbol_escape = '\' )
 package ${package}.wat.base;
 
-import ${package}.autotest.annotations.Report;
-import ${package}.autotest.selenium.context.AbstractPage;
-import ${package}.autotest.services.CookiesService;
+import com.wiley.autotest.annotations.Report;
+import com.wiley.autotest.selenium.context.AbstractPage;
+import com.wiley.autotest.services.CookiesService;
 import ${package}.wat.selenium.SeleniumSettings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

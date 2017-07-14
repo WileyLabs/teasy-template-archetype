@@ -3,8 +3,8 @@
 #set( $symbol_escape = '\' )
 package ${package}.wat.selenium;
 
-import ${package}.autotest.spring.CustomPropertyPlaceholderConfigurer;
-import ${package}.autotest.spring.Settings;
+import com.wiley.autotest.spring.CustomPropertyPlaceholderConfigurer;
+import com.wiley.autotest.spring.Settings;
 
 /**
  * @author alexey.a.semenov@gmail.com

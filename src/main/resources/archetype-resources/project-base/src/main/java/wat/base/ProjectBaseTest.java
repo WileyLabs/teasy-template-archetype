@@ -3,7 +3,7 @@
 #set( $symbol_escape = '\' )
 package ${package}.wat.base;
 
-import ${package}.autotest.selenium.AbstractSeleniumTest;
+import com.wiley.autotest.selenium.AbstractSeleniumTest;
 import ${package}.wat.selenium.Login;
 import ${package}.wat.selenium.SeleniumSettings;
 import ${package}.wat.util.RandomGenerator;

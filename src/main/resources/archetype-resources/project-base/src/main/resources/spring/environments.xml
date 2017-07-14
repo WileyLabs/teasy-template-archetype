@@ -6,7 +6,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="propertyConfigurer" class="${package}.autotest.spring.CustomPropertyPlaceholderConfigurer">
+    <bean id="propertyConfigurer" class="com.wiley.autotest.spring.CustomPropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
                 <value>/properties/selenium.properties</value>
@@ -15,7 +15,7 @@
         </property>
         <property name="environments">
             <list>
-                <bean init-method="init" class="${package}.autotest.spring.CustomPropertyPlaceholderConfigurer">
+                <bean init-method="init" class="com.wiley.autotest.spring.CustomPropertyPlaceholderConfigurer">
                     <property name="environment" value="DEFAULT"/>
                     <property name="locations">
                         <list>

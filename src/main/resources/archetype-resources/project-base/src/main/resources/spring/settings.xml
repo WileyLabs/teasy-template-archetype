@@ -3,8 +3,9 @@
 #set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="seleniumSettings" init-method="init" class="${package}.wat.selenium.SeleniumSettings">
         <property name="environment" value="${symbol_dollar}{run.tests.on}"/>
@@ -16,5 +17,17 @@
     </bean>
 
     <import resource="classpath*:/spring/environments.xml"/>
+
+    <context:component-scan base-package="${package}.wat.pages"
+                            scope-resolver="com.wiley.autotest.selenium.HardCodedPrototypeScopeResolver"/>
+
+    <context:component-scan base-package="${package}.wat.components"
+                            scope-resolver="com.wiley.autotest.selenium.HardCodedPrototypeScopeResolver"/>
+
+    <context:component-scan base-package="${package}.wat.preconditions"
+                            scope-resolver="com.wiley.autotest.selenium.HardCodedPrototypeScopeResolver"/>
+
+    <context:component-scan base-package="${package}.wat.base"
+                            scope-resolver="com.wiley.autotest.selenium.HardCodedPrototypeScopeResolver"/>
 
 </beans>
