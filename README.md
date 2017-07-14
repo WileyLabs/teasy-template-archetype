@@ -1,4 +1,7 @@
 # teasy-template-archetype
+
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.wiley/teasy-template-archetype/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.wiley/teasy-template-archetype)
+
 This is a maven archetype to create a template project to get started using teasy from scratch.
 # Description
 Comming soon...
