@@ -4,7 +4,7 @@
 
 This is a maven archetype template to get started using teasy from scratch.
 # Description
-Comming soon...
+Coming soon...
 # Usage
 You will need to have the following soft installed:
 * java 8+
