@@ -7,13 +7,13 @@
 
     <test name="thread.1" preserve-order="true">
         <classes>
-            <class name="${package}.project.tests.functional.OpenMainPageByUrlTest"/>
+            <class name="${package}.project.tests.demo.OpenMainPageByUrlTest"/>
         </classes>
     </test>
 
     <test name="thread.2" preserve-order="true">
         <classes>
-            <class name="${package}.project.tests.functional.OpenMainPageTest"/>
+            <class name="${package}.project.tests.demo.OpenMainPageTest"/>
         </classes>
     </test>
 
