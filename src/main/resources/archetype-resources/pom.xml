@@ -34,7 +34,7 @@
         <mavenSurefirePlugin.PermSize>256m</mavenSurefirePlugin.PermSize>
         <mavenSurefirePlugin.MaxPermSize>1024m</mavenSurefirePlugin.MaxPermSize>
 
-        <teasy.version>1.0.1-beta</teasy.version>
+        <teasy.version>${teasyVersion}</teasy.version>
 
         <testng-version>6.9.10</testng-version>
         <org.slf4j.version>1.6.2</org.slf4j.version>

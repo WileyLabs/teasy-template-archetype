@@ -17,7 +17,7 @@ import ru.yandex.qatools.allure.annotations.Step;
  * Description:
  */
 @Component
-public class AboutPage<P extends ProjectMainPage> extends ProjectBasePage<P> {
+public class AboutPage<P extends ProjectHomePage> extends ProjectBasePage<P> {
 
     @Step
     public AboutPage checkAboutPageIsOpened() {
