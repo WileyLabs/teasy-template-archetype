@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.wat.pages;
+package ${package}.wat.pages.demo;
 
 import ${package}.wat.base.ProjectBasePage;
 import org.openqa.selenium.By;
@@ -18,13 +18,13 @@ public class ProjectHomePage<P extends ProjectBasePage> extends ProjectBasePage<
 
     @Step
     public AboutPage openAboutPage() {
-        link(By.cssSelector("${symbol_pound}about-btn a")).click();
+        element(By.cssSelector("${symbol_pound}about-btn a")).click();
         return redirectTo(AboutPage.class);
     }
 
     @Step
     public ProjectHomePage checkMainPageIsOpened() {
-        postponedAssertNotNull(findElementByNoThrow(By.cssSelector("${symbol_pound}homepage")), "Main page is not opened");
+        element(By.cssSelector("${symbol_pound}homepage")).should().beDisplayed();
         return this;
     }
 }

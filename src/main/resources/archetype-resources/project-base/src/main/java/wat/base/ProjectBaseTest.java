@@ -13,6 +13,8 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Step;
 
+import ${package}.wat.pages.demo.ProjectHomePage;
+
 import java.lang.reflect.Method;
 
 import static org.testng.Reporter.log;
@@ -48,6 +50,14 @@ public abstract class ProjectBaseTest<P extends ProjectBaseTest> extends Abstrac
         log(message);
         LOGGER.info(message);
         return (P) this;
+    }
+
+    public ProjectHomePage openProjectPageByUrl(String url) {
+        return getPage(ProjectHomePage.class, url);
+    }
+
+    public ProjectHomePage openProjectPage() {
+        return getPage(ProjectHomePage.class, getSettings().getFullHost());
     }
 
     protected String getEmailByKey(String key) {
