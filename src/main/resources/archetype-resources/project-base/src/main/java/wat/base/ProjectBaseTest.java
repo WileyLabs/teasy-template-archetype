@@ -52,6 +52,10 @@ public abstract class ProjectBaseTest<P extends ProjectBaseTest> extends Abstrac
         return (P) this;
     }
 
+    public GooglePage openGooglePage(String url) {
+        return getPage(GooglePage.class, url);
+    }
+
     public ProjectHomePage openProjectPageByUrl(String url) {
         return getPage(ProjectHomePage.class, url);
     }
