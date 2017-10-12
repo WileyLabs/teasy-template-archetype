@@ -4,7 +4,7 @@
 
   <groupId>com.wiley</groupId>
   <artifactId>teasy-template-archetype</artifactId>
-  <version>1.0.4-beta</version>
+  <version>1.0.5-beta</version>
   <packaging>maven-archetype</packaging>
 
   <name>teasy-template-archetype</name>
