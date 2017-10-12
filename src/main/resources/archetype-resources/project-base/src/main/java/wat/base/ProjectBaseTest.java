@@ -13,7 +13,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Step;
 
-import ${package}.wat.pages.demo.ProjectHomePage;
+import ${package}.wat.pages.demo.GooglePage;
 
 import java.lang.reflect.Method;
 
@@ -54,14 +54,6 @@ public abstract class ProjectBaseTest<P extends ProjectBaseTest> extends Abstrac
 
     public GooglePage openGooglePage(String url) {
         return getPage(GooglePage.class, url);
-    }
-
-    public ProjectHomePage openProjectPageByUrl(String url) {
-        return getPage(ProjectHomePage.class, url);
-    }
-
-    public ProjectHomePage openProjectPage() {
-        return getPage(ProjectHomePage.class, getSettings().getFullHost());
     }
 
     protected String getEmailByKey(String key) {

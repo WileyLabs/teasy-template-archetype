@@ -17,7 +17,6 @@ import ru.yandex.qatools.allure.annotations.Step;
  */
 
 @Component
-@SuppressWarnings("unchecked")
 public class ProjectBasePage<P extends ProjectBasePage> extends AbstractPage<P> {
 
     @Autowired
