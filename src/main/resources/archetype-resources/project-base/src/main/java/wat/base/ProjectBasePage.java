@@ -3,7 +3,6 @@
 #set( $symbol_escape = '\' )
 package ${package}.wat.base;
 
-import com.wiley.autotest.annotations.Report;
 import com.wiley.autotest.selenium.context.AbstractPage;
 import com.wiley.autotest.services.CookiesService;
 import ${package}.wat.selenium.SeleniumSettings;
@@ -36,7 +35,6 @@ public class ProjectBasePage<P extends ProjectBasePage> extends AbstractPage<P> 
     }
 
     @Step
-    @Report
     protected void switchToMainWindow() {
         getDriver().switchTo().window(getDriver().getWindowHandles().iterator().next());
     }
