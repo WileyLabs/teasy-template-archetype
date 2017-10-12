@@ -21,9 +21,9 @@ run the following command:
 `mvn archetype:generate -DarchetypeGroupId=com.wiley -DarchetypeArtifactId=teasy-template-archetype -DarchetypeVersion=${archetypeVersion} -DteasyVersion=${teasyVersion} -DgroupId=${groupId} -DartifactId=${artifactId} -Dversion=${version}`
 
 where 
-`${archetypeVersion}` is a maven-central version [![](https://maven-badges.herokuapp.com/maven-central/com.wiley/teasy-template-archetype/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.wiley/teasy-template-archetype), or in the `pom.xml` `<version>1.0.1-beta</version>` field e.g. `1.0.0-beta`
+`${archetypeVersion}` is a maven-central version [![](https://maven-badges.herokuapp.com/maven-central/com.wiley/teasy-template-archetype/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.wiley/teasy-template-archetype), or in the `pom.xml` `<version>1.0.3-beta</version>` field e.g. `1.0.3-beta`
 
-`${teasyVersion}` is a maven-central version [![](https://maven-badges.herokuapp.com/maven-central/com.wiley/teasy/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.wiley/teasy), or in the `pom.xml` `<teasy.version>1.0.13-beta</teasy.version>` field e.g. `1.0.13-beta`
+`${teasyVersion}` is a maven-central version [![](https://maven-badges.herokuapp.com/maven-central/com.wiley/teasy/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.wiley/teasy), or in the `pom.xml` `<teasy.version>1.0.14-beta</teasy.version>` field e.g. `1.0.14-beta`
 
 `${groupId}` e.g. `com.my_organization_name`
 
