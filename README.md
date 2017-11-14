@@ -10,8 +10,6 @@ You will need to have the following soft installed:
 * java 8+
 * maven 3+
 
-[Use this guide for the Intellij IDEA](https://github.com/WileyLabs/teasy-template-archetype/wiki/Intellij-IDEA-set-up-guide)
-
 From your console:
 
 in your console go to the folder where you want the template to be generated
