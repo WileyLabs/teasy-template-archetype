@@ -2,7 +2,7 @@
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.wiley/teasy-template-archetype/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.wiley/teasy-template-archetype)
 
-This is a maven archetype template to get started using teasy from scratch.
+This is a maven archetype template to get started using [teasy](https://github.com/WileyLabs/teasy) from scratch.
 # Description
 Coming soon...
 # Usage
