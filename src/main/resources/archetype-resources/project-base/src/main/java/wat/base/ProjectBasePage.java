@@ -3,12 +3,13 @@
 #set( $symbol_escape = '\' )
 package ${package}.wat.base;
 
+import com.wiley.autotest.selenium.SeleniumHolder;
 import com.wiley.autotest.selenium.context.AbstractPage;
 import com.wiley.autotest.services.CookiesService;
 import ${package}.wat.selenium.SeleniumSettings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import ru.yandex.qatools.allure.annotations.Step;
+import io.qameta.allure.Step;
 
 /**
  * User: dfedorov
@@ -17,7 +18,7 @@ import ru.yandex.qatools.allure.annotations.Step;
  */
 
 @Component
-public class ProjectBasePage<P extends ProjectBasePage> extends AbstractPage<P> {
+public class ProjectBasePage extends AbstractPage {
 
     @Autowired
     private CookiesService cookiesService;
@@ -35,6 +36,6 @@ public class ProjectBasePage<P extends ProjectBasePage> extends AbstractPage<P> 
 
     @Step
     protected void switchToMainWindow() {
-        getDriver().switchTo().window(getDriver().getWindowHandles().iterator().next());
+        SeleniumHolder.getWebDriver().switchTo().window(SeleniumHolder.getWebDriver().getWindowHandles().iterator().next());
     }
 }
