@@ -8,7 +8,7 @@ import ${package}.wat.base.ProjectBasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.springframework.stereotype.Component;
-import ru.yandex.qatools.allure.annotations.Step;
+import io.qameta.allure.Step;
 
 /**
  * User: ntyukavkin
